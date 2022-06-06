@@ -6,6 +6,8 @@
 		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/reset1.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/classify.css"/>
+		<script src="../js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 		<style>
 			  	.devices-box{
 					width: 100%;
@@ -40,8 +42,6 @@
 		</nav>
 		<main>
 			<div class="main_mid">
-				<!--<div class="main_mid-top">
-				</div>-->
 				<div class="main_mid-bottom">
 					<?php 
 					include('../mysql_connect.php');
@@ -54,184 +54,32 @@
 					<div>
 						<div>
 						<div class='devices-box'>
-						<div class='image-box'>
+						<a class='image-box' id='box$inum' href='status.php?id={$row['id1']}&pageid=1' style:'z-index:3' target='_blank'>
 							<img id='content$inum' src='../所有图片/{$row['id1']}.jpeg' onload='if(this.height >= 300){this.width = 300}'>
-						</div>
+						</a>
 						</div>
 						<p></p>
-						<i style='display: none;''>1</i>
-						<img onclick='change()' class='tihuan' src='../img/换一换.svg'>
+						<img id='tihuan$inum' class='tihuan' src='../img/换一换.svg'>
 						<script>
-						function change(){
-							var img$inum = document.getElementById('content$inum')
-							if(img$inum.src != '../所有图片/{$row['id1']}.jpeg'){
-								img$inum.src = '../所有图片/{$row['id1']}.jpeg'
+						$('#tihuan$inum').click(e=>{
+							let Img$inum=$('#content$inum')
+							let url$inum=$('#box$inum')
+							if(Img$inum.attr('src')!='../所有图片/{$row['id1']}.jpeg'){
+								Img$inum.attr('src','../所有图片/{$row['id1']}.jpeg')
+								url$inum.attr('href','status.php?id={$row['id1']}&pageid=1')
 							}else{
-								img$inum.src = '../所有图片/{$row['id2']}.jpeg'
+								Img$inum.attr('src','../所有图片/{$row['id2']}.jpeg')
+								url$inum.attr('href','status.php?id={$row['id2']}&pageid=2')
 							}
-						}
+						})
 						</script>
 						</div>
 					</div>";
+					
 					};
 					?>
-					<!--<div>
-						<div>
-							<div>
-								<img src="../img/5cc006adccb56d2448a31bbb.jpeg" >
-							</div>
-							<p>粉黛生春古典花卉图-010</p>
-							<i style="display: none;">1</i>
-							<img class="tihuan" src="../img/换一换.svg" >
-						</div>
-					</div>
-					<div>
-						<div>
-							<div>
-								<img src="../img/5cc006adccb56d2448a31bbb.jpeg" >
-							</div>
-							<p>粉黛生春古典花卉图-010</p>
-							<i style="display: none;">1</i>
-							<img class="tihuan" src="../img/换一换.svg" >
-						</div>
-					</div>
-					<div>
-						<div>
-							<div>
-								<img src="../img/5cc006adccb56d2448a31bbb.jpeg" >
-							</div>
-							<p>粉黛生春古典花卉图-010</p>
-							<i style="display: none;">1</i>
-							<img class="tihuan" src="../img/换一换.svg" >
-						</div>
-					</div>
-					<div>
-						<div>
-							<div>
-								<img src="../img/5cc006adccb56d2448a31bbb.jpeg" >
-							</div>
-							<p>粉黛生春古典花卉图-010</p>
-							<i style="display: none;">1</i>
-							<img class="tihuan" src="../img/换一换.svg" >
-						</div>
-					</div>
-					<div>
-						<div>
-							<div>
-								<img src="../img/5cc006adccb56d2448a31bbb.jpeg" >
-							</div>
-							<p>粉黛生春古典花卉图-010</p>
-							<i style="display: none;">1</i>
-							<img class="tihuan" src="../img/换一换.svg" >
-						</div>
-					</div>
-					<div>
-						<div>
-							<div>
-								<img src="../img/5cc006adccb56d2448a31bbb.jpeg" >
-							</div>
-							<p>粉黛生春古典花卉图-010</p>
-							<i style="display: none;">1</i>
-							<img class="tihuan" src="../img/换一换.svg" >
-						</div>
-					</div>
-					<div>
-						<div>
-							<div>
-								<img src="../img/5cc006adccb56d2448a31bbb.jpeg" >
-							</div>
-							<p>粉黛生春古典花卉图-010</p>
-							<i style="display: none;">1</i>
-							<img class="tihuan" src="../img/换一换.svg" >
-						</div>
-					</div>
-					<div>
-						<div>
-							<div>
-								<img src="../img/5cc006adccb56d2448a31bbb.jpeg" >
-							</div>
-							<p>粉黛生春古典花卉图-010</p>
-							<i style="display: none;">1</i>
-							<img class="tihuan" src="../img/换一换.svg" >
-						</div>
-					</div>
-					<div>
-						<div>
-							<div>
-								<img src="../img/5cc006adccb56d2448a31bbb.jpeg" >
-							</div>
-							<p>粉黛生春古典花卉图-010</p>
-							<i style="display: none;">1</i>
-							<img class="tihuan" src="../img/换一换.svg" >
-						</div>
-					</div>
-					<div>
-						<div>
-							<div>
-								<img src="../img/5cc006adccb56d2448a31bbb.jpeg" >
-							</div>
-							<p>粉黛生春古典花卉图-010</p>
-							<i style="display: none;">1</i>
-							<img class="tihuan" src="../img/换一换.svg" >
-						</div>
-					</div>
-					<div>
-						<div>
-							<div>
-								<img src="../img/5cc006adccb56d2448a31bbb.jpeg" >
-							</div>
-							<p>粉黛生春古典花卉图-010</p>
-							<i style="display: none;">1</i>
-							<img class="tihuan" src="../img/换一换.svg" >
-						</div>
-					</div>
-					<div>
-						<div>
-							<div>
-								<img src="../img/5cc006adccb56d2448a31bbb.jpeg" >
-							</div>
-							<p>粉黛生春古典花卉图-010</p>
-							<i style="display: none;">1</i>
-							<img class="tihuan" src="../img/换一换.svg" >
-						</div>
-					</div>
-					<div>
-						<div>
-							<div>
-								<img src="../img/5cc006adccb56d2448a31bbb.jpeg" >
-							</div>
-							<p>粉黛生春古典花卉图-010</p>
-							<i style="display: none;">1</i>
-							<img class="tihuan" src="../img/换一换.svg" >
-						</div>
-					</div>
-					<div>
-						<div>
-							<div>
-								<img src="../img/5cc006adccb56d2448a31bbb.jpeg" >
-							</div>
-							<p>粉黛生春古典花卉图-010</p>
-							<i style="display: none;">1</i>
-							<img class="tihuan" src="../img/换一换.svg" >
-						</div>
-					</div>
-					<div>
-						<div>
-							<div>
-								<img src="../img/5cc006adccb56d2448a31bbb.jpeg" >
-							</div>
-							<p>粉黛生春古典花卉图-010</p>
-							<i style="display: none;">1</i>
-							<img class="tihuan" src="../img/换一换.svg" >
-						</div>
-					</div>-->
-					
 				</div>
 			</div>
 		</main>
-		
-		<script src="../js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../js/classify.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 </html>
