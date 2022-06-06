@@ -127,9 +127,6 @@ TI=('国画'+'南宋')*'佚名'-'柏'*/
 				</div>
 			</div>
 			<div class="main_mid">
-				<div class="main_mid-top">
-					搜索结果有250条
-				</div>
 				<div class="main_mid-bottom">
 					<?php if(!empty($cc)){
 						while($row=mysqli_fetch_assoc($rs)){

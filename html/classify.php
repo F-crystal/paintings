@@ -22,7 +22,36 @@
 				<!--<div class="main_mid-top">
 				</div>-->
 				<div class="main_mid-bottom">
+					<?php 
+					include('../mysql_connect.php');
+					$sql = 'select 类别与入口id1.入口id as id1,类别与入口id2.入口id as id2 from 类别与入口id1,类别与入口id2 where 类别与入口id1.类别 = 类别与入口id2.类别';
+					$res = mysqli_query($con,$sql);
+					foreach($res as $row){
+						echo"
 					<div>
+						<div>
+							<div>
+								<img src='../所有图片/{$row['id1']}.jpeg' onload='if(this.height >= 300){this.width = 300}'>
+							</div>
+							<p></p>
+							<i style='display: none;''>1</i>
+							<img class='tihuan' src='../img/换一换.svg'>
+						</div>
+						<script>
+						$('.tihuan').click()e=>{
+							let target=$(e.srcElement);
+							let Img=target.prev().prev().prev().children()
+							if(Img.attr('src')!='所有图片/{$row['id1']}.jpeg'){
+								Img.attr('src','所有图片/{$row['id1']}.jpeg')
+							}else{
+								Img.attr('src','所有图片/{$row['id2']}.jpeg')
+							}
+						})
+						</script>
+					</div>";
+					};
+					?>
+					<!--<div>
 						<div>
 							<div>
 								<img src="../img/5cc006adccb56d2448a31bbb.jpeg" >
@@ -171,7 +200,7 @@
 							<i style="display: none;">1</i>
 							<img class="tihuan" src="../img/换一换.svg" >
 						</div>
-					</div>
+					</div>-->
 					
 				</div>
 			</div>

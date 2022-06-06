@@ -1,4 +1,4 @@
-$(".tihuan").click(e=>{
+/*$(".tihuan").click(e=>{
 	let target=$(e.srcElement);
 	let Img=target.prev().prev().prev().children()
 	if(Img.attr('src')!='../img/5cc006e4ccb56d2448a31c68.jpeg'){
@@ -6,7 +6,7 @@ $(".tihuan").click(e=>{
 	}else{
 		Img.attr('src','../img/5cc006adccb56d2448a31bbb.jpeg')
 	}
-})
+})*/
 
 $.get('php/server.php','hide=classify',data=>{
 	data.forEach(v=>{
