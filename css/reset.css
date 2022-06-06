@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+html,body,ol,ul,li,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,input,textarea,select,figure{
+    /* 清除默认间距 */
+    margin:0;
+    padding:0;
+}
+
+a,u{
+    /* 去掉下划线 */
+    text-decoration:none;
+}
+
+ul,li{
+    /* 去掉列表符号 */
+    list-style:none;
+}
+
+h1,h2,h3,h4,h5,h6{
+    /* font-size:16px; */
+    /* font-weight:normal; */
+}
+
+i,em{
+    /* 不倾斜 */
+    font-style:normal;
+}
+
+b,strong{
+    /* 不加粗 */
+    font-weight:normal;
+}
+
+input{
+    outline:none;
+}
+
+img{
+    vertical-align:top;
+}
+
+.clear_fix::after{
+    content:"";
+    display:block;
+    height:0;
+    clear:both;
+    overflow:hidden;
+    visibility:hidden;
+}
+.clear_fix{
+    zoom:1;
+}

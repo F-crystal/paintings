@@ -1,0 +1,97 @@
+nav{
+	height: 60px;
+	background-color: #2A514E;
+	line-height: 60px;
+	width: 100%;
+	display: flex;
+}
+#logo{
+	font-size: 28px;
+	text-align: center;
+	width: 30%;
+	height: 60px;
+	line-height: 60px;
+	font-weight: 700;
+}
+#logo>a{
+	color: #AF9566;
+}
+nav>ul{
+	width: 70%;
+	display: flex;
+	justify-content: space-around;
+}
+nav>ul>li{
+	font-size: 22px;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+}
+nav>ul>li>a{
+	color: #fff;
+}
+nav>ul>li.active{
+	text-decoration: underline;
+}
+main{
+	background-color: #668B79;
+	height: 90vh;
+	padding-top: 35px;
+}
+main>.main_mid>.main_mid-top{
+	border-bottom: 1px solid #E9EAE7;
+	font-size: 20px;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 6px;
+	color: #fff;
+}
+main>.main_mid>.main_mid-bottom{
+	padding-top: 30px;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	overflow: auto;
+	background-color: #668B79;
+}
+main>.main_mid>.main_mid-bottom>div{
+	width: 33.33%;
+	margin: 20px 0;
+}
+main>.main_mid>.main_mid-bottom>div>div{
+	width: 250px;
+	height: 250px;
+	background-color: #fff;
+	text-align: center;
+	margin: 20px 20px;
+	cursor: pointer;
+	margin: auto;
+	position: relative;
+}
+main>.main_mid>.main_mid-bottom>div>div>div{
+	height: 220px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+main>.main_mid>.main_mid-bottom>div>div>div>img{
+	width: 150px;
+}
+main>.main_mid>.main_mid-bottom>div p{
+	font-size: 16px;
+}
+
+
+
+.tihuan{
+	position: absolute;
+	top: 6px;
+	left: 3px;
+	transition: .6s;
+}
+.tihuan:hover{
+	transform: rotateZ(180deg);
+}
+.tihuan:active{
+	transform: rotateZ(360deg);
+}

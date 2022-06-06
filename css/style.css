@@ -1,0 +1,131 @@
+nav{
+	height: 60px;
+	background-color: #2A514E;
+	line-height: 60px;
+	width: 100%;
+	display: flex;
+}
+#logo{
+	font-size: 34px;
+	color: #AF9566;
+	text-align: center;
+	width: 30%;
+	height: 60px;
+	line-height: 60px;
+	font-weight: 700;
+	font-family:"华文新魏", Times, serif;
+}
+nav>ul{
+	width: 70%;
+	display: flex;
+	justify-content: space-around;
+}
+nav>ul>li{
+	font-size: 26px;
+	color: #fff;
+	text-align: center;
+	font-family:"华文新魏", Times, serif;
+}
+nav>ul>li>a{
+	color: #fff;
+}
+nav>ul>li.active{
+	text-decoration: underline;
+}
+main{
+	/* background-color: #668B79; */
+	background:url(../img/1.jpg);
+    background-size:cover;
+	height: 90vh;
+	padding-top: 35px;
+}
+main>.main_top{
+	width: 457px;
+	margin: 200px auto;
+	margin-bottom: 35px;
+}
+main>.main_top #select_btn{
+	height: 40px;
+	width: 60px;
+	border-radius:10px;
+}
+main>.main_top #search{
+	height: 37px;
+	width: 260px;
+	border-radius:10px;
+}
+main>.main_top select{
+	width: 120px;
+	background-color: #DCC1A2;
+	height: 40px;
+	border-radius:10px;
+}
+main>.main_top select>option{
+	color: #fff;
+	text-align: center;
+	line-height: 29px;
+}
+
+main>.main_mid{
+	background-color: #D9E2DD;
+	width: 65%;
+	height: 650px;
+	margin: 0 auto;
+}
+main>.main_mid>.main_mid-top{
+	border-bottom: 1px solid #E9EAE7;
+	font-size: 20px;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 6px;
+}
+main>.main_mid>.main_mid-bottom{
+	padding-top: 30px;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	overflow: auto;
+	height: 550px;
+}
+main>.main_mid>.main_mid-bottom>div{
+	width: 250px;
+	height: 250px;
+	background-color: #fff;
+	text-align: center;
+	margin: 20px 20px;
+	cursor: pointer;
+}
+main>.main_mid>.main_mid-bottom>div>div{
+	height: 220px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+main>.main_mid>.main_mid-bottom>div img{
+	width: 150px;
+}
+main>.main_mid>.main_mid-bottom>div p{
+	font-size: 16px;
+}
+.hai{
+	color: #FFFFFF;
+	background-color: rgba(0,0,0,.5);
+	position: absolute;
+	top: 180px;
+	left: 500px;
+	border-radius: 4px;
+	height: 30px;
+	font-size: 20px;
+	line-height: 30px;
+	padding: 0px 5px;
+	visibility: hidden;
+	opacity: 0;
+	transition: all .2s;
+	-webkit-transition: all .2s;
+}
+main:hover .hai{
+	visibility: visible;
+	opacity: 1;
+}
+
+
