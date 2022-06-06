@@ -53,20 +53,15 @@
 						echo"
 					<div>
 						<div>
-<<<<<<< HEAD
-						<div class=\"devices-box\">
-						<div class=\"image-box\">
-								<img src='../所有图片/{$row['id1']}.jpeg' onload='if(this.height >= 300){this.width = 300}'>
-=======
-							<div>
-								<img id='content$inum' src='../所有图片/{$row['id1']}.jpeg' onload='if(this.height >= 300){this.width = 300}'>
->>>>>>> 56a8aae (一些修正)
-							</div>
-							</div>
-							<p></p>
-							<i style='display: none;''>1</i>
-							<img onclick='change()' class='tihuan' src='../img/换一换.svg'>
-							<script>
+						<div class='devices-box'>
+						<div class='image-box'>
+							<img id='content$inum' src='../所有图片/{$row['id1']}.jpeg' onload='if(this.height >= 300){this.width = 300}'>
+						</div>
+						</div>
+						<p></p>
+						<i style='display: none;''>1</i>
+						<img onclick='change()' class='tihuan' src='../img/换一换.svg'>
+						<script>
 						function change(){
 							var img$inum = document.getElementById('content$inum')
 							if(img$inum.src != '../所有图片/{$row['id1']}.jpeg'){
