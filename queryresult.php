@@ -6,6 +6,27 @@
 		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
 		<link rel="stylesheet" type="text/css" href="css/reset1.css"/>
 		<link rel="stylesheet" type="text/css" href="css/primary.css"/>
+		<style>
+			  	.devices-box{
+					width: 100%;
+					height: 225px;
+					background: #ccc;
+					box-sizing: border-box;
+					margin-right: 20px;
+				}
+				.image-box{
+					width: 100%;
+					height: 100%;
+					display: flex;
+					justify-content: center;
+					align-items: center;
+				}
+				img{
+					max-width: 100%;
+					max-height: 100%;
+					object-fit: scale-down;
+				}
+		</style>
 	</head>
 	<body>
 		<nav>
@@ -77,8 +98,10 @@
 								
 								<div id='container'>
 								<a href='html/details.php?id={$row['id']}'>
-									<div>
+									<div class=\"devices-box\">
+									<div class=\"image-box\">
 										<img src='所有图片/{$row['id']}.jpeg' >
+									</div>
 									</div>
 									<p>{$row['标题']}</p>
 									<i style='display: none;'>1</i>
