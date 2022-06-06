@@ -8,7 +8,7 @@
 	}
 })*/
 
-$.get('php/server.php','hide=classify',data=>{
+/*$.get('php/server.php','hide=classify',data=>{
 	data.forEach(v=>{
 		$(".main_mid-bottom").append(
 			$(`<div>
@@ -30,4 +30,4 @@ $("main>.main_mid>.main_mid-bottom>div>div>div>img").click(e=>{
 	var id=target.parent().next().next().html();
 	sessionStorage.id=id;
 	this.open("status.php");
-})
+})*/
