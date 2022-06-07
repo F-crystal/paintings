@@ -28,6 +28,9 @@
 					max-height: 100%;
 					object-fit: scale-down;
 				}
+				.ptitle{
+					color: #AF9566;
+				}
 		</style>
 	</head>
 	<body>
@@ -58,7 +61,30 @@
 							<img id='content$inum' src='../所有图片/{$row['id1']}.jpeg' onload='if(this.height >= 300){this.width = 300}'>
 						</a>
 						</div>
-						<p></p>
+						<p id='title$inum' class='ptitle'></p>
+						<script>
+                // 页面加载时便调用函数
+                window.onload = listen()
+                function listen(){
+					var namelist = document.getElementById('content$inum').src.split('/')[5]
+					var pid = namelist.split('.')[0]
+                    if (window.XMLHttpRequest){
+                        // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行
+                        var xmlhttp=new XMLHttpRequest();
+                    }else{
+                        // IE6, IE5 浏览器执行
+                        var xmlhttp=new ActiveXObject('Microsoft.XMLHTTP');
+                    }
+                    xmlhttp.onreadystatechange=function(){
+                        if (xmlhttp.readyState==4 && xmlhttp.status==200){ 
+                            var result=xmlhttp.responseText;//获取返回值
+                            document.getElementById('title$inum').innerHTML=result;//更新页面内容
+                        }
+                    }
+                    xmlhttp.open('GET','classify_listen.php?pid='+pid,true);//传给监听
+                    xmlhttp.send();
+                }
+            	</script>
 						<img id='tihuan$inum' class='tihuan' src='../img/换一换.svg'>
 						<script>
 						$('#tihuan$inum').click(e=>{
