@@ -93,9 +93,43 @@
 							if(Img$inum.attr('src')!='../所有图片/{$row['id1']}.jpeg'){
 								Img$inum.attr('src','../所有图片/{$row['id1']}.jpeg')
 								url$inum.attr('href','status.php?id={$row['id1']}&pageid=1')
+								var namelist = document.getElementById('content$inum').src.split('/')[5]
+					var pid = namelist.split('.')[0]
+                    if (window.XMLHttpRequest){
+                        // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行
+                        var xmlhttp=new XMLHttpRequest();
+                    }else{
+                        // IE6, IE5 浏览器执行
+                        var xmlhttp=new ActiveXObject('Microsoft.XMLHTTP');
+                    }
+                    xmlhttp.onreadystatechange=function(){
+                        if (xmlhttp.readyState==4 && xmlhttp.status==200){ 
+                            var result=xmlhttp.responseText;//获取返回值
+                            document.getElementById('title$inum').innerHTML=result;//更新页面内容
+                        }
+                    }
+                    xmlhttp.open('GET','classify_listen.php?pid='+pid,true);//传给监听
+                    xmlhttp.send();
 							}else{
 								Img$inum.attr('src','../所有图片/{$row['id2']}.jpeg')
 								url$inum.attr('href','status.php?id={$row['id2']}&pageid=2')
+								var namelist = document.getElementById('content$inum').src.split('/')[5]
+					var pid = namelist.split('.')[0]
+                    if (window.XMLHttpRequest){
+                        // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行
+                        var xmlhttp=new XMLHttpRequest();
+                    }else{
+                        // IE6, IE5 浏览器执行
+                        var xmlhttp=new ActiveXObject('Microsoft.XMLHTTP');
+                    }
+                    xmlhttp.onreadystatechange=function(){
+                        if (xmlhttp.readyState==4 && xmlhttp.status==200){ 
+                            var result=xmlhttp.responseText;//获取返回值
+                            document.getElementById('title$inum').innerHTML=result;//更新页面内容
+                        }
+                    }
+                    xmlhttp.open('GET','classify_listen.php?pid='+pid,true);//传给监听
+                    xmlhttp.send();
 							}
 						})
 						</script>
