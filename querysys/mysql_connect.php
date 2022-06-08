@@ -1,10 +1,10 @@
 <?php
-    //连接数据库（去掉敏感信息）
+    //连接数据库
     define('db_host','127.0.0.1');
     define("db_user","paintings");
-    define("db_password","");
+    define("db_password","123456");
     define("db_db","paintings");
-    define("db_port",); 
+    define("db_port",3305);
 
     $con = @mysqli_connect(
         db_host,

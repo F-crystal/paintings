@@ -67,25 +67,37 @@
 									$mid = "select 受控词 from 标题受控词表 where 非受控词 like '%{$gjc}%'";
 									$midvalue = mysqli_query($con,$mid);
 									$midva = mysqli_fetch_array($midvalue)[0];
-									$sql = "select 标题,id from 汇总数据 where 标题 like '%{$midva}%' order by id" ;
+									if ($midva == ""){
+										$sql = "select 标题,id from 汇总数据,作者作品数目 where 汇总数据.作者=作者作品数目.作者 and 标题 like '%{$gjc}%' order by 作品数目 desc" ;
+									}else{
+										$sql = "select 标题,id from 汇总数据,作者作品数目 where 汇总数据.作者=作者作品数目.作者 and 标题 like '%{$midva}%' order by 作品数目 desc" ;
+									};
 									break;
 								case "artist":
 									$mid = "select 受控词 from 作者受控词表 where 非受控词 like '%{$gjc}%'";
 									$midvalue = mysqli_query($con,$mid);
 									$midva = mysqli_fetch_array($midvalue)[0];
-									$sql = "select 标题,id from 汇总数据 where 作者 like '%{$midva}%' order by id";
+									if ($midva == ""){
+										$sql = "select 标题,id from 汇总数据,作者作品数目 where 汇总数据.作者=作者作品数目.作者 and 汇总数据.作者 like '%{$gjc}%' order by 作品数目 desc" ;
+									}else{
+										$sql = "select 标题,id from 汇总数据,作者作品数目 where 汇总数据.作者=作者作品数目.作者 and 汇总数据.作者 like '%{$midva}%' order by 作品数目 desc" ;
+									};
 									break;
 								case "dynasty":
-									$sql="select 标题,id from 汇总数据 where 创作时代 like '%{$gjc}%' order by id";
+									$sql = "select 标题,id from 汇总数据,作者作品数目 where 汇总数据.作者=作者作品数目.作者 and 创作时代 like '%{$gjc}%' order by 作品数目 desc" ;
 									break;
 								case "size":
-									$sql="select 标题,id from 汇总数据 where 画幅 like '%{$gjc}%' order by id";
+									$sql = "select 标题,id from 汇总数据,作者作品数目 where 汇总数据.作者=作者作品数目.作者 and 画幅 like '%{$gjc}%' order by 作品数目 desc" ;
 									break;
 								case "content":
 									$mid="select 受控词 from 内容受控词表 where 非受控词 like '%{$gjc}%'";
 									$midvalue = mysqli_query($con,$mid);
 									$midva = mysqli_fetch_array($midvalue)[0];
-									$sql="select 标题,id from 汇总数据 where 内容 like '%{$midva}%' order by id";
+									if ($midva == ""){
+										$sql = "select 标题,id from 汇总数据,作者作品数目 where 汇总数据.作者=作者作品数目.作者 and 内容 like '%{$gjc}%' order by 作品数目 desc" ;
+									}else{
+										$sql = "select 标题,id from 汇总数据,作者作品数目 where 汇总数据.作者=作者作品数目.作者 and 内容 like '%{$midva}%' order by 作品数目 desc" ;
+									};
 									break;
 							};
 						};
@@ -94,8 +106,7 @@
 						//循环生成内容
 						foreach ($res as $row){					
 								$inum += 1;
-								echo "
-								
+								echo "					
 								<div id='container'>
 								<a href='html/details.php?id={$row['id']}'>
 									<div class=\"devices-box\">
@@ -106,8 +117,7 @@
 									<p>{$row['标题']}</p>
 									<i style='display: none;'>1</i>
 								</a>
-								</div>
-								
+								</div>	
 								";
 						};
 						echo "<script> var x = document.getElementById('restitle');x.innerHTML = '搜索结果有{$inum}条';</script>";

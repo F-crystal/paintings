@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/reset1.css"/>
+		<link rel="stylesheet" type="text/css" href="css/expert.css"/>
+	</head>
+	<body>
+		<nav>
+			<div id="logo"><a href="../index.php">中国国画检索系统</a></div>
+			<ul>
+				<li><a href="../index.php">首页</a></li>
+				
+             <li class="active">专家检索</li>
+				<li><a href="../html/classify.php">分类浏览</a></li>
+			</ul>
+		</nav>
+		<main>
+			<div class="main_top">
+		
+					<input name="search" id="search" placeholder="藏品搜索" />
+					<input type="button" value="查询" onclick="toquery()"/>
+			
+				<div class="seek">示例</div>
+				<div class="tishi">
+					可检索字段：</br>
+                TI=标题，AU=作者名，DY=朝代，FR=画幅，CO=主题</br>
+                </br>
+                示例：</br>
+                1）TI='秋风'and DY='唐'and AU%('陈'+'王')可以检索到标题包含"秋风"并且朝代包含"唐"并且作者为"陈"姓和"王"姓的所有画作;</br>
+                2）TI='秋风'*'玉露'and CO='花'可以检索到标题包含"秋风"及"玉露"并且内容中包含"花"的所有画作;</br>
+                3）TI=('霜'+'露')*'秋'-'冬'可检索标题含有"霜"或"露"有关"秋"的画作，并且可以去除与"冬"有关的部分画作内容;</br>
+				</div>
+			</div>
+			<div class="main_mid">
+				<div class="main_mid-top" id="sumcount">
+				</div>
+				<div class="main_mid-bottom" id="midbox">
+				</div>
+			</div>
+		</main>
+		
+		<script src="js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.form.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/script.js" type="text/javascript" charset="utf-8"></script>
+	<script>
+function toquery(){
+var keyword=document.getElementById("search").value;
+$.ajax({
+	url:"server.php",
+	type:"post",
+	data:{"keyword":keyword},
+	success:function(data){
+		//alert(data);
+ 		var backvalues= data.split("@");
+		var str="搜索结果有"+backvalues[0]+"条";
+		document.getElementById("sumcount").innerHTML=str;
+		if(backvalues[0]==0){
+			document.getElementById("midbox").innerHTML="没有检索到任何数据";
+		}else{
+			document.getElementById("midbox").innerHTML=backvalues[1];
+		}
+	}
+})
+}
+</script>
+	</body>
+</html>

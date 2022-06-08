@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/reset1.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/details.css"/>
+	</head>
+	<body>
+		<nav>
+			<div id="logo"><a href="../index.php">中国国画检索系统</a></div>
+			<ul>
+				<li><a href="../index.php">首页</a></li>
+             	<li><a href="../querysys/expert.html">专家检索</a></li>
+				<li><a href="classify.php">分类浏览</a></li>
+			</ul>
+		</nav>
+		<main>
+			<div class="left" id="left">
+
+			</div>
+			<div class="right" id="right">
+				 
+			</div>
+		</main>
+		
+		<script src="../js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+		var id=sessionStorage.id;
+		
+ 			$.get('../detail1.php',{"id":id},data=>{
+ 		 
+ 				document.getElementById("left").innerHTML="<div>名称："+data["标题"]+"</div><div>作者：<span>"+data["作者"]+"</span></div><div>画幅："+data["画幅"]+"</div><div>创作时代："+data["创作时代"]+"</div><div>内容："+data["内容"]+"</div>";
+				document.getElementById("right").innerHTML="<img src='"+data["图片"]+"'>";
+
+			},"JSON")
+		</script>
+	</body>
+</html>

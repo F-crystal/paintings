@@ -1,0 +1,131 @@
+nav{
+	height: 60px;
+	background-color: #2A514E;
+	line-height: 60px;
+	width: 100%;
+	display: flex;
+}
+#logo{
+	font-size: 28px;
+	color: #AF9566;
+	text-align: center;
+	width: 30%;
+	height: 60px;
+	line-height: 60px;
+	font-weight: 700;
+}
+#logo>a{
+	color: #AF9566;
+}
+nav>ul{
+	width: 70%;
+	display: flex;
+	justify-content: space-around;
+}
+nav>ul>li{
+	font-size: 22px;
+	color: #fff;
+	text-align: center;
+}
+nav>ul>li>a{
+	color: #fff;
+}
+nav>ul>li.active{
+	text-decoration: underline;
+}
+main{
+	background-color: #668B79;
+	height: 90vh;
+	padding-top: 70px;
+}
+main>.main_top{
+	width: 400px;
+	margin: 0 auto 70px;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+main>.main_top input{
+	height: 29px;
+	width: 37px;
+}
+main>.main_top #search{
+	height: 24px;
+	width: 230px;
+}
+main>.main_top>.seek{
+	width: 43px;
+	height: 22px;
+	background-color: #00A1D5;
+	text-align: center;
+	line-height: 22px;
+	border-radius: 3px;
+	color: #fcfcfc;
+	cursor: pointer;
+	margin-left: 12px;
+	user-select: none;
+}
+main>.main_top>.seek:hover{
+	background-color: #409EFF;
+}
+main>.main_top>.seek:active{
+	background-color: #3A8EE6;
+}
+main>.main_top>.tishi{
+	position: absolute;
+	right: -200px;
+	top: -36px;
+	background-color: darkcyan;
+	color: #fafafa;
+	text-indent: 2em;
+	font-size: 16px;
+	width: 250px;
+	height: 82px;
+	line-height: 22px;
+	padding: 8px;
+	overflow: auto;
+	box-shadow: 0 2px 10px rgb(255 255 255 / 20%);
+	display: none;
+}
+
+main>.main_mid{
+	background-color: #D9E2DD;
+	width: 65%;
+	height: 650px;
+	margin: 0 auto;
+}
+main>.main_mid>.main_mid-top{
+	border-bottom: 1px solid #E9EAE7;
+	font-size: 20px;
+	height: 40px;
+	line-height: 40px;
+	padding-left: 6px;
+}
+main>.main_mid>.main_mid-bottom{
+	padding-top: 30px;
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	overflow: auto;
+	height: 550px;
+}
+main>.main_mid>.main_mid-bottom>div{
+	width: 250px;
+	height: 250px;
+	background-color: #fff;
+	text-align: center;
+	margin: 20px 20px;
+	cursor: pointer;
+}
+main>.main_mid>.main_mid-bottom>div>div{
+	height: 220px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+main>.main_mid>.main_mid-bottom>div img{
+	width: 150px;
+}
+main>.main_mid>.main_mid-bottom>div p{
+	font-size: 16px;
+}
