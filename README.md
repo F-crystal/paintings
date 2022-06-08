@@ -1,11 +1,12 @@
 <!-- Add banner here -->
-
+![Banner](https://github.com/F-crystal/paintings/blob/c247c7edb4f5e220afd3e46f8b158eed477490a6/logo/Chinese%20National%20Painting%20Search%20System.png)
 # paintings
-
 <!-- Add buttons here -->
-
 <!-- Describe your project in brief -->
-
+This is a Chinese national painting search system.
+Data Source:[第壹印像](https://topimage.design)
+Main Functions:Main functions: simple search, expert search, category browsing
+Main Languages: php, html, css, javascript, sql
 <!-- The project title should be self explanotory and try not to make it a mouthful. (Although exceptions exist- **awesome-readme-writing-guide-for-open-source-projects** - would have been a cool name)
 
 Add a cover/banner image for your README. **Why?** Because it easily **grabs people's attention** and it **looks cool**(*duh!obviously!*).
@@ -39,8 +40,7 @@ I use [**Shields IO**](https://shields.io/) for making badges. It is a simple an
 
 ![Tweet](https://img.shields.io/twitter/url?style=flat-square&logo=twitter&url=https%3A%2F%2Fnavendu.me%2Fnsfw-filter%2Findex.html): This is not essential but it is a cool way to let others know about your project! Clicking this button automatically opens twitter and writes a tweet about your project and link to it. All the user has to do is to click tweet. Isn't that neat? -->
 
-# Demo-Preview
-
+<!--# Demo-Preview-->
 <!-- Add a demo for your project -->
 
 <!-- After you have written about your project, it is a good idea to have a demo/preview(**video/gif/screenshots** are good options) of your project so that people can know what to expect in your project. You could also add the demo in the previous section with the product description.
@@ -57,17 +57,17 @@ Here is a sample TOC(*wow! such cool!*) that is actually the TOC for this README
 
 - [Project Title](#project-title)
 - [Table of contents](#table-of-contents)
-- [Installation](#installation)
-- [Usage](#usage)
+<!-- [Installation](#installation)
+<!-- [Usage](#usage)
 - [Development](#development)
 - [Contribute](#contribute)
     - [Sponsor](#sponsor)
-    - [Adding new features or fixing bugs](#adding-new-features-or-fixing-bugs)
+    - [Adding new features or fixing bugs](#adding-new-features-or-fixing-bugs)-->
 - [License](#license)
 - [Footer](#footer)
 
-# Installation
-[(Back to top)](#table-of-contents)
+<!--# Installation
+[(Back to top)](#table-of-contents)-->
 
 <!-- *You might have noticed the **Back to top** button(if not, please notice, it's right there!). This is a good idea because it makes your README **easy to navigate.*** 
 
@@ -87,13 +87,13 @@ To use this project, first clone the repo on your device using the command below
 
 ```git clone https://github.com/navendu-pottekkat/nsfw-filter.git``` -->
 
-# Usage
-[(Back to top)](#table-of-contents)
+<!--# Usage
+[(Back to top)](#table-of-contents)-->
 
 <!-- This is optional and it is used to give the user info on how to use the project after installation. This could be added in the Installation section also. -->
 
-# Development
-[(Back to top)](#table-of-contents)
+<!--# Development
+[(Back to top)](#table-of-contents)-->
 
 <!-- This is the place where you give instructions to developers on how to modify the code.
 
@@ -103,15 +103,15 @@ You could also give specific instructions to how they can setup their developmen
 
 Ideally, you should keep the README simple. If you need to add more complex explanations, use a wiki. Check out [this wiki](https://github.com/navendu-pottekkat/nsfw-filter/wiki) for inspiration. -->
 
-# Contribute
-[(Back to top)](#table-of-contents)
+<!--# Contribute
+[(Back to top)](#table-of-contents)-->
 
 <!-- This is where you can let people know how they can **contribute** to your project. Some of the ways are given below.
 
 Also this shows how you can add subsections within a section. -->
 
-### Sponsor
-[(Back to top)](#table-of-contents)
+<!--### Sponsor
+[(Back to top)](#table-of-contents)-->
 
 <!-- Your project is gaining traction and it is being used by thousands of people(***with this README there will be even more***). Now it would be a good time to look for people or organisations to sponsor your project. This could be because you are not generating any revenue from your project and you require money for keeping the project alive.
 
@@ -119,8 +119,8 @@ You could add how people can sponsor your project in this section. Add your patr
 
 A good idea is to also display the sponsors with their organisation logos or badges to show them your love!(*Someday I will get a sponsor and I can show my love*) -->
 
-### Adding new features or fixing bugs
-[(Back to top)](#table-of-contents)
+<!--### Adding new features or fixing bugs
+[(Back to top)](#table-of-contents)-->
 
 <!-- This is to give people an idea how they can raise issues or feature requests in your projects. 
 
