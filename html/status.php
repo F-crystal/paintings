@@ -33,7 +33,7 @@
 			<div id="logo"><a href="../index.php">中国国画检索系统</a></div>
 			<ul>
 				<li><a href="../index.php">首页</a></li>
-             	<li><a href="../expert.php">专家检索</a></li>
+             	<li><a href="../querysys/expert.html">专家检索</a></li>
 				<li class="active">分类浏览</li>
 			</ul>
 		</nav>
