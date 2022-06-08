@@ -4,8 +4,11 @@
 <!-- Add buttons here -->
 <!-- Describe your project in brief -->
 This is a Chinese national painting search system.
+<br>
 Data Source:[第壹印像](https://topimage.design)
+<br>
 Main Functions:Main functions: simple search, expert search, category browsing
+<br>
 Main Languages: php, html, css, javascript, sql
 <!-- The project title should be self explanotory and try not to make it a mouthful. (Although exceptions exist- **awesome-readme-writing-guide-for-open-source-projects** - would have been a cool name)
 
