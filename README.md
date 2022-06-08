@@ -134,7 +134,6 @@ Personally and by standard, you should use a [issue template](https://github.com
 You could also add contact details for people to get in touch with you regarding your project. -->
 
 # License
-[(Back to top)](#table-of-contents)
 
 <!-- Adding the license to README is a good practice so that people can easily refer to it.
 
@@ -145,7 +144,6 @@ I personally add the name of the license and provide a link to it like below. --
 [GNU General Public License version 3](https://opensource.org/licenses/GPL-3.0)
 
 # Footer
-[(Back to top)](#table-of-contents)
 
 <!-- Let's also add a footer because I love footers and also you **can** use this to convey important info.
 
